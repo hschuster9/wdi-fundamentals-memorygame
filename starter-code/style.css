@@ -80,3 +80,8 @@ body {
 span{
 	color: #ff0000; 
 }
+
+img {
+	height: 200px;
+	width: 150px;
+}
