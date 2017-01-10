@@ -10,7 +10,6 @@ var cardFour = "king";
 var cards = ['queen', 'queen', 'king', 'king'];
 var cardsInPlay = [];
 
-
 var board = document.getElementById('game-board');
 
 function createCards() {
@@ -19,15 +18,11 @@ for (var i = 0; i <cards.length; i++){
 	cardElement.className = 'card';
 	cardElement.setAttribute('data-card', cards[i]);
 	cardElement.addEventListener('click', isTwoCards);
-	
 
-	board.appendChild(cardElement);
-	board.appendChild(cardElement);
+		board.appendChild(cardElement);
+		board.appendChild(cardElement);
 }
 }
-
-
- 
 
 function isTwoCards() {
 	cardsInPlay.push(this.getAttribute('data-card'));
@@ -38,24 +33,20 @@ function isTwoCards() {
 	else {
 		this.innerHTML = "<img src='playing-card-161491_640.png'>";
 	}
-	
+
 	if (cardsInPlay.length === 2) {
 		isMatch(cardsInPlay);
 		cardsInPlay = [];
 	}
 }
 
-
-
 function isMatch(cards){
 
-if (cards[0] === cards[1]) {
-	alert("You found a match!");
-}
-else {
-	alert("Sorry, try again");
-} 
-
+	if (cards[0] === cards[1]) {
+		alert("You found a match!");
+	}
+		else {
+			alert("Sorry, try again");
+		} 
 }
 createCards();
-
